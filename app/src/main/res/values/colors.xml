@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FAFBFD</color>
+    <color name="colorPrimaryDark">#FAFBFD</color>
+    <color name="colorAccent">#002BFF</color>
+    <color name="tittle_text">#333333</color>
+    <color name="desc_text">#182039</color>
+    <color name="main_bg">#FAFBFD</color>
+    <color name="button_text_color">#5056CA</color>
+    <color name="button_bg_color">#121236</color>
+    <color name="logo_button_bg">#0F707070</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="facebook_bg">#3B5998</color>
+    <color name="common_dark_text_color">#333333</color>
+    <color name="snack_bar_bg">#A8BEF7</color>
+    <color name="extra_light_grey">#A0A0A0</color>
+    <color name="bottom_sheet_bg_color">#FFFFFF</color>
+    <color name="chip_bg_color">#F4F4F4</color>
+    <color name="speaker_bg_color">#E5E9FF</color>
+    <color name="nav_bg_color">#002BFF</color>
+    <color name="profile_bg_color">#FFFFFF</color>
+    <color name="profile_banner_bg_color">#F4F4F4</color>
+    <color name="profile_banner_overlay_color">#453D3E4C</color>
+    <color name="text_input_bg_color">#00000000</color>
+    <color name="ripple_color">#D6DDFF</color>
+
+</resources>

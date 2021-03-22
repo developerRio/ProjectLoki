@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCDCDC"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <!--Maps Preview-->
+    <fragment
+        android:id="@+id/home_map_view"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Bottom sheet-->
+    <LinearLayout
+        android:id="@+id/bottom_sheet_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/bottom_sheet_bg"
+        android:orientation="vertical"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <View
+            android:id="@+id/header_rect_view"
+            android:layout_width="40dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:alpha="0.6"
+            android:background="@drawable/bottom_sheet_header_rect" />
+
+        <RelativeLayout
+            android:id="@+id/inner_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:padding="16dp">
+            <!--AutoCompleteWidget-->
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/auto_complete_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <fragment
+                    android:id="@+id/autocomplete_fragment"
+                    android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/location_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/auto_complete_container"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_bg"
+                android:elevation="5dp"
+                android:hint="@string/where_to_go"
+                android:imeOptions="actionSearch"
+                android:importantForAutofill="no"
+                android:inputType="text|textAutoComplete"
+                android:paddingStart="14dp"
+                android:paddingEnd="0dp"
+                android:textColor="@color/tittle_text"
+                android:textColorHint="@color/tittle_text"
+                android:textSize="16sp"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/recent_routes_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/location_edit_text"
+                android:layout_marginTop="24dp"
+                android:alpha="0.7"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/recent_routes"
+                android:textColor="@color/tittle_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/remove_all_data_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/location_edit_text"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="24dp"
+                android:alpha="0.9"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="@string/clear_history"
+                android:textColor="@color/tittle_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recent_locations_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recent_routes_header"
+                android:layout_marginTop="8dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/locations_items_layout" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

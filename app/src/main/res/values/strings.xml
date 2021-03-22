@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ProjectLoki</string>
+
+    <string name="api_key">AIzaSyCan9PUaxerh16jjnuO6u5QklWhe8UT_bU</string>
+
+    <string name="the_nproject_nloki">The\nProject\nLoki</string>
+    <string name="where_to_go">Where to go ?</string>
+    <string name="location_name">Location Name</string>
+    <string name="distance_time">Distance Time</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="recent_routes">Recent Routes</string>
+    <string name="clear_history">Clear History</string>
+</resources>
